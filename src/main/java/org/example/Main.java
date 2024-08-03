@@ -64,7 +64,7 @@ public class Main {
         }
 
         UI.clearScreen();
-        UI.printMatch(chessMatch, captured);
+        UI.printMatch(chessMatch, capturedd2);
 
     }
 
