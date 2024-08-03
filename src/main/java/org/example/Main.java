@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.boardgame.Board;
-import org.example.boardgame.Position;
 import org.example.chess.ChessException;
 import org.example.chess.ChessMatch;
 import org.example.chess.ChessPiece;
@@ -64,7 +62,7 @@ public class Main {
         }
 
         UI.clearScreen();
-        UI.printMatch(chessMatch, capturedd2);
+        UI.printMatch(chessMatch, captured);
 
     }
 
