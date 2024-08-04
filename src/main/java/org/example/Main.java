@@ -1,10 +1,12 @@
 package org.example;
 
+import com.sun.source.tree.WhileLoopTree;
 import org.example.chess.ChessException;
 import org.example.chess.ChessMatch;
 import org.example.chess.ChessPiece;
 import org.example.chess.ChessPosition;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -50,7 +52,16 @@ public class Main {
 
                     System.out.print("Enter piece for promotion (B/N/R/Q): ");
 
-                    String type = sc.nextLine();
+                    String type = sc.nextLine().toUpperCase();
+
+                    while (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
+
+                        System.out.print("Invalid value! Enter piece for promotion (B/N/R/Q): ");
+
+                        type = sc.nextLine().toUpperCase();
+
+                    }
+
                     chessMatch.replacePromotedPiece(type);
 
                 }
